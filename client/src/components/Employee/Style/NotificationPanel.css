@@ -1,0 +1,161 @@
+/* Panel Container */
+.notification-panel {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 340px;
+    height: 100vh;
+    background: #ffffff;
+    border-left: 1px solid #ddd;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1050;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .notification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .notification-content {
+    flex: 1;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007bff; /* Default for info, you can change it based on type */
+  }
+  
+  .notification-item.warning .icon {
+    color: #ffc107;
+  }
+  
+  .notification-item.success .icon {
+    color: #28a745;
+  }
+
+
+  /* Slide In Animation */
+  .slide-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Header */
+  .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .notification-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  /* Body */
+  .notification-body {
+    padding: 16px;
+  }
+  
+  /* Notification Item */
+  .notification-item {
+    background-color: #f4f4f4;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 0.4s ease forwards;
+  }
+  
+  .notification-item.unread {
+    background-color: #eaf4ff;
+  }
+  
+  .notification-item.read {
+    background-color: #f1f1f1;
+  }
+  
+  /* Notification Types */
+  .notification-item.info {
+    border-left: 5px solid #007bff;
+  }
+  
+  .notification-item.warning {
+    border-left: 5px solid #ffc107;
+  }
+  
+  .notification-item.success {
+    border-left: 5px solid #28a745;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .timestamp {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .actions button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  
+  .actions .btn-info {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .actions .btn-info:hover {
+    background-color: #0069d9;
+  }
+  
+  .actions .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .actions .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Fade-in Keyframe */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,119 @@
+:root {
+  --accent: #FF6F61;
+  --gold: #F0C75E;
+}
+
+.section-bg {
+  background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+}
+
+.lux-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+.lux-subheading {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: white;
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn-gold:hover {
+  background-color: #e6b84e;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+  transition: 0.4s ease-in-out;
+}
+
+
+/* ++++++++++++++++++++++++++++++++ */
+
+
+/* Frosted Glass Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
+.btn-glass {
+  border-radius: 30px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+.btn-glass:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* Accent Color */
+.bg-accent {
+  background-color: #FF6F61;
+  color: white;
+}
+.text-accent {
+  color: #FF6F61;
+}
+
+/* Page Background */
+.section-bg {
+  background: linear-gradient(to bottom right, #fbeee6, #fdfdfd);
+}
+
+/* SweetAlert Glass Modal */
+.swal2-popup {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 20px !important;
+ 
+  font-family: "Poppins", sans-serif;
+}
+
+
+.swal2-title {
+  color: #ffffff;
+  font-size: 2rem !important;
+}
+.swal2-confirm {
+  background-color: #FF6F61 !important;
+  color: #fff !important;
+  border-radius: 30px !important;
+  padding: 10px 30px;
+  font-weight: 600;
+}
+.swal2-html-container {
+  color: #222;
+  font-size: 1rem;
+}
+
+/* For SweetAlert Close Button (X icon) */
+.swal2-close {
+  font-size: 1.5rem !important;
+  color: #FF6F61 !important;
+  top: 10px;
+  right: 10px;
+} 

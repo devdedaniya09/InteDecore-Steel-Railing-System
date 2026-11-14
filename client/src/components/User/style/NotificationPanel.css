@@ -1,0 +1,139 @@
+/* === Notification Panel Redesigned === */
+
+.user-notification-panel {
+  margin-top: 55px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90%;
+  max-width: 420px;
+  height: 100vh;
+  z-index: 1050;
+  background: rgba(30, 30, 30, 0.75); /* Dark frosted glass */
+  backdrop-filter: blur(25px);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  overflow-y: auto;
+  border-left: 4px solid #FF6F61;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  animation: floatSlide 0.6s ease forwards;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+/* Slide In Animation */
+@keyframes floatSlide {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+}
+
+.notif-header h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.3);
+  color: #FF6F61;
+}
+
+/* Notification Card */
+.notif-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #FF6F61;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.notif-card.read {
+  opacity: 0.6;
+  border-left: 5px solid #888;
+  color: #cccccc;
+}
+
+.glass-light:hover {
+  background: rgba(255, 111, 97, 0.08);
+  box-shadow: 0 0 20px rgba(255, 111, 97, 0.5);
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.btn-outline-light {
+  border: 1px solid #FF6F61;
+  color: #FF6F61;
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  border-radius: 12px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #FF6F61;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+.btn-danger {
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  border-radius: 12px;
+  background: #d9363e;
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background: #ff4d4f;
+  box-shadow: 0 0 12px rgba(255, 77, 79, 0.4);
+}
+
+/* Empty Message */
+.notif-body p {
+  font-size: 1.1rem;
+  color: #ccc;
+  font-weight: 500;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .user-notification-panel {
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+  }
+}
